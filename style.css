@@ -512,7 +512,9 @@ footer {
 }
 
 @media (max-width: 342px) {
-  .html5-color .css3-color .java-color {
-    font-size: 4.5rem;
+  .html5-color,
+  .css3-color,
+  .java-color {
+    font-size: 3.75rem;
   }
 }
