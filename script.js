@@ -89,6 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// footer date
+document.addEventListener("DOMContentLoaded", function () {
+  const yearSpan = document.getElementById("current-year");
+  const currentYear = new Date().getFullYear();
+  yearSpan.textContent = currentYear;
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const scrollBtn = document.getElementById("scrollBtn");
 
