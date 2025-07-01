@@ -69,44 +69,80 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   this.reset();
 });
 
-// Typing effect for hero section
-function typeWriter(element, words, speed = 100) {
-  let i = 0;
-  let j = 0;
-  let currentWord = "";
-  let isDeleting = false;
+document.addEventListener("DOMContentLoaded", function () {
+  const projectDetailModal = document.getElementById("projectDetailModal");
+  projectDetailModal.addEventListener("show.bs.modal", function (event) {
+    // Button that triggered the modal
+    const button = event.relatedTarget;
 
-  function type() {
-    currentWord = words[i];
+    // Extract info from data-bs-* attributes
+    const title = button.getAttribute("data-title");
+    const description = button.getAttribute("data-description");
+    const image = button.getAttribute("data-image");
+    const technologies = button.getAttribute("data-technologies"); // Comma-separated string
 
-    if (isDeleting) {
-      element.textContent = currentWord.substring(0, j--);
+    // Update the modal's content.
+    const modalTitle = projectDetailModal.querySelector("#modalProjectTitle");
+    const modalDescription = projectDetailModal.querySelector(
+      "#modalProjectDescription"
+    );
+    const modalImage = projectDetailModal.querySelector("#modalProjectImage");
+    const modalTechnologies = projectDetailModal.querySelector(
+      "#modalProjectTechnologies"
+    );
+    const modalViewProjectLink = projectDetailModal.querySelector(
+      "#modalViewProjectLink"
+    );
+
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modalImage.src = image;
+    modalImage.alt = title + " Image"; // Update alt text for accessibility
+
+    // Clear previous badges
+    modalTechnologies.innerHTML = "";
+    // Create badges for technologies
+    if (technologies) {
+      technologies.split(",").forEach((tech) => {
+        const badge = document.createElement("span");
+        badge.classList.add("badge", "bg-primary-custom", "me-2", "mb-2"); // Added me-2 for margin-right
+        badge.textContent = tech.trim();
+        modalTechnologies.appendChild(badge);
+      });
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById("scrollBtn");
+
+  // Function to check if the user has scrolled enough to display the button
+  function toggleScrollBtn() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      scrollBtn.style.display = "block";
     } else {
-      element.textContent = currentWord.substring(0, j++);
+      scrollBtn.style.display = "none";
     }
-
-    if (!isDeleting && j == currentWord.length) {
-      setTimeout(() => (isDeleting = true), 1000);
-    } else if (isDeleting && j == 0) {
-      isDeleting = false;
-      i = (i + 1) % words.length;
-    }
-
-    setTimeout(type, isDeleting ? 50 : speed);
   }
 
-  type();
-}
+  // Function to scroll to the top of the page
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+    });
+  }
 
-// Add some interactive elements
-document.querySelectorAll(".skill-item").forEach((item) => {
-  item.addEventListener("mouseenter", function () {
-    this.style.transform = "translateY(-10px) scale(1.02)";
-  });
+  // Add scroll event listener to the window
+  window.addEventListener("scroll", toggleScrollBtn);
 
-  item.addEventListener("mouseleave", function () {
-    this.style.transform = "translateY(0) scale(1)";
-  });
+  // Add click event listener to the scroll button
+  scrollBtn.addEventListener("click", scrollToTop);
+
+  // Initially hide the scroll button on page load
+  toggleScrollBtn();
 });
 
 // Add particle effect to hero section

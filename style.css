@@ -226,6 +226,13 @@ body {
   border-radius: 50%; /* Keep image circular */
 }
 
+#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
 .about-content {
   background: white;
   padding: 40px;
@@ -314,87 +321,101 @@ education-item p {
   border-right-color: #343a40;
 }
 
-/* Specific colors for each icon */
-.skill-icon.html5-color {
-  color: #e44d26; /* HTML5 brand color */
+.html5-color {
+  color: #e34f26;
 }
-.skill-icon.html5-color:hover {
-  color: #c93b1d; /* Darker shade on hover */
+.css3-color {
+  color: #1572b6;
 }
-
-.skill-icon.css3-color {
-  color: #264de4; /* CSS3 brand color */
+.js-color {
+  color: #f7df1e;
 }
-.skill-icon.css3-color:hover {
-  color: #1a39c2;
+.bootstrap-color {
+  color: #7952b3;
 }
-
-.skill-icon.js-color {
-  color: #f7df1e; /* JavaScript brand color */
+.react-color {
+  color: #61dafb;
 }
-.skill-icon.js-color:hover {
-  color: #d8c213;
+.node-color {
+  color: #339933;
 }
-
-.skill-icon.bootstrap-color {
-  color: #7952b3; /* Bootstrap brand color */
+.java-color {
+  color: #007396;
 }
-.skill-icon.bootstrap-color:hover {
-  color: #644199;
-}
-
-.skill-icon.react-color {
-  color: #61dafb; /* React brand color */
-}
-.skill-icon.react-color:hover {
-  color: #4dc2e0;
-}
-
-.skill-icon.node-color {
-  color: #339933; /* Node.js brand color */
-}
-.skill-icon.node-color:hover {
-  color: #2a7a2a;
-}
-
-.skill-icon.java-color {
-  color: #007396; /* Java brand color */
-}
-.skill-icon.java-color:hover {
-  color: #005f7a;
-}
-
-.skill-icon.database-color {
-  color: #4479a1; /* Generic database color */
-}
-.skill-icon.database-color:hover {
-  color: #376485;
+.database-color {
+  color: #336791;
 }
 
 .project-card {
-  background: white;
-  border-radius: 15px;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  margin-bottom: 30px;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure cards have equal height in a row */
 }
 
 .project-image {
-  height: 200px;
-  background: var(--gradient);
+  width: 100%;
+  height: 180px; /* Fixed height for consistency */
+  background-color: #e2e8f0; /* Light gray placeholder background */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 3rem;
+  overflow: hidden;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the area */
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.project-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748; /* Darker gray heading */
+  margin-bottom: 0.75rem;
+}
+.project-card p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+.badge.bg-primary-custom {
+  background-color: #7258b4;
+  color: #ffffff;
+}
+.btn-outline-primary-custom {
+  border-color: #4f46e5; /* Indigo-600 border */
+  color: #7258b4;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem; /* Rounded button corners */
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.btn-outline-primary-custom:hover {
+  background-color: #7258b4; /* Indigo-600 background on hover */
+  color: #ffffff;
 }
 
+/* Modal specific styling */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.modal-body .badge {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .contact-form {
   background: white;
   padding: 40px;
