@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- AOS Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Vraj Isotiya</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <!-- Floating shapes for background effect -->
+      <div class="floating-shapes">
+        <div class="shape">
+          <i class="fas fa-code" style="font-size: 4rem; color: white"></i>
+        </div>
+        <div class="shape">
+          <i
+            class="fas fa-laptop-code"
+            style="font-size: 3rem; color: white"
+          ></i>
+        </div>
+        <div class="shape">
+          <i
+            class="fas fa-mobile-alt"
+            style="font-size: 3.5rem; color: white"
+          ></i>
+        </div>
+      </div>
+
+      <div class="container z-10 position-relative">
+        <div class="row align-items-center justify-content-between g-5">
+          <!-- Left Column: Hero Content -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <div class="hero-content">
+              <h1 class="display-4 fw-bold mb-3">Hi, I'm Vraj Isotiya</h1>
+              <p class="lead mb-4 opacity-90">
+                Full Stack Developer in the making, passionate about learning
+                and building end-to-end web experiences.
+              </p>
+              <div
+                class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3"
+              >
+                <a href="#projects" class="btn btn-outline-light"
+                  >View My Work</a
+                >
+                <a href="#contact" class="btn btn-outline-light"
+                  >Get In Touch</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Profile Photo -->
+          <div
+            class="col-lg-6 d-flex justify-content-center justify-content-lg-end mt-4 mt-lg-0"
+          >
+            <div class="profile-image-container">
+              <!-- Replace this URL with your actual photo URL -->
+              <img
+                src="asset/photo.jpg"
+                alt="Vraj Isotiya"
+                class="profile-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-info" id="scrollBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+      <div class="container">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="about-content fade-in">
+              <p class="lead">
+                I'm a motivated Full Stack Developer in the making, currently in
+                my final year of Computer Engineering. I enjoy building
+                responsive, user-friendly applications and exploring both
+                frontend and backend technologies.
+              </p>
+              <p>
+                My journey into development began with a fascination for how
+                digital systems work, and it has grown into a passion for
+                solving real-world problems through code. I'm always eager to
+                learn new tools, contribute to meaningful projects, and grow as
+                a developer in a collaborative environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education" class="section-padding bg-gray-custom">
+      <div class="container">
+        <h2 class="section-title fade-in">Education</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="education-item fade-in fade-in-delay-1">
+              <h3>Bachelor of Engineering in Computer Engineering</h3>
+              <h4>V.V.P. Engineering College, Rajkot</h4>
+              <p class="dates">2022 - 2026</p>
+            </div>
+            <div class="education-item fade-in fade-in-delay-2">
+              <h3>Higher Secondary Education</h3>
+              <h4>The School Of Science, Rajkot</h4>
+              <p class="dates">2020 - 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-light-custom">
+      <div class="container">
+        <h2 class="section-title fade-in">My Skills</h2>
+        <div class="skill-icon-container">
+          <i
+            class="fa-brands fa-html5 skill-icon html5-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="HTML5"
+          ></i>
+
+          <i
+            class="fa-brands fa-css3-alt skill-icon css3-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="CSS3"
+          ></i>
+
+          <i
+            class="fa-brands fa-js skill-icon js-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="JavaScript"
+          ></i>
+
+          <i
+            class="fa-brands fa-bootstrap skill-icon bootstrap-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Bootstrap"
+          ></i>
+
+          <i
+            class="fa-brands fa-react skill-icon react-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="React"
+          ></i>
+
+          <i
+            class="fa-brands fa-node-js skill-icon node-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Node.js"
+          ></i>
+
+          <i
+            class="fa-brands fa-java skill-icon java-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Java"
+          ></i>
+
+          <i
+            class="fa-solid fa-database skill-icon database-color"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="SQL/Databases"
+          ></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card fade-in">
+              <div class="project-image">
+                <img
+                  src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/01/url-shortener.jpg"
+                  alt="URL Shortener"
+                />
+              </div>
+              <div class="p-4 d-flex flex-column h-100">
+                <h4>URL Shortener</h4>
+                <p>
+                  A full-stack URL shortener application built with Node.js,
+                  Express, MongoDB, and React, allowing users to generate and
+                  manage short links with click tracking.
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-outline-primary-custom view-project-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectDetailModal"
+                    data-title="URL Shortener"
+                    data-description="A full-stack URL shortener application built with Node.js, Express, MongoDB, and React, allowing users to generate and manage short links with click tracking. It features custom short URLs, click analytics, and user authentication."
+                    data-image="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/01/url-shortener.jpg"
+                    data-technologies="React, Node.js, Express, MongoDB"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card fade-in">
+              <div class="project-image">
+                <img src="asset/p2.png" alt="Wanderlust" />
+              </div>
+              <div class="p-4 d-flex flex-column h-100">
+                <h4>Wanderlust</h4>
+                <p>
+                  Wanderlust is a full-stack travel listing platform that allows
+                  users to add, edit, delete, and review listings, with
+                  integrated map functionality to display listing locations
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-outline-primary-custom view-project-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectDetailModal"
+                    data-title="Wanderlust"
+                    data-description="Wanderlust is a full-stack travel listing application built with Express, EJS, MongoDB, and Mapbox API. It features user authentication with Passport.js, and allows users to add, edit, delete, and review listings, with interactive maps to show listing locations."
+                    data-image="asset/p2.png"
+                    data-technologies="EJS, Node.js, Express, MongoDB, Mapbox, passport js"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card fade-in">
+              <div class="project-image">
+                <img
+                  src="https://placehold.co/600x300/fee2e2/dc2626?text=Smart+Pantry"
+                  alt="Smart Pantry"
+                />
+              </div>
+              <div class="p-4 d-flex flex-column h-100">
+                <h4>Smart Pantry</h4>
+                <p>
+                  Smart Pantry is a full-stack pantry management app where users
+                  can add, edit, and delete items, get notified about items
+                  nearing expiration, and receive recipe suggestions based on
+                  available ingredients
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                    href="#"
+                    class="btn btn-sm btn-outline-primary-custom view-project-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#projectDetailModal"
+                    data-title="Smart Pantry"
+                    data-description="Smart Pantry is a full-stack pantry management application built with Node.js, Express, MongoDB, and EJS. It features user authentication via Passport.js and Google OAuth. Users can add, edit, and delete pantry items, get alerts for items nearing expiration, and receive recipe suggestions using the Spoonacular API"
+                    data-image="https://placehold.co/600x300/fee2e2/dc2626?text=Smart+Pantry"
+                    data-technologies="EJS, Node.js, Express, MongoDB, Spoonacular API, passport js, Google OAuth"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="projectDetailModal"
+      tabindex="-1"
+      aria-labelledby="projectDetailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectDetailModalLabel">
+              Project Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="modalProjectImage"
+              src=""
+              alt="Project Image"
+              class="img-fluid mb-3 rounded"
+            />
+            <h4 id="modalProjectTitle" class="mb-2"></h4>
+            <p id="modalProjectDescription" class="mb-3"></p>
+            <div id="modalProjectTechnologies" class="mb-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-form fade-in">
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="text-center mt-4">
+              <div class="social-links">
+                <a href="https://github.com/vrajisotiya" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/vraj-isotiya-b5783b283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="mailto:vrajisotiya88@gmail.com" target="_blank"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Vraj Isotiya. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
