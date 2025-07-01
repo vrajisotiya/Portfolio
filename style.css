@@ -286,7 +286,7 @@ education-item p {
   padding: 20px;
 }
 .skill-icon {
-  font-size: 4rem; /* Large icon size */
+  font-size: 3rem;
   color: rgb(113, 92, 185);
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effects */
   padding: 15px; /* Padding around the icon for better touch target */
@@ -508,5 +508,11 @@ footer {
   .about-content,
   .contact-form {
     padding: 30px;
+  }
+}
+
+@media (max-width: 342px) {
+  .html5-color .css3-color .java-color {
+    font-size: 4.5rem;
   }
 }
